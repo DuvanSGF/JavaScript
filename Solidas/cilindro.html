@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cilindro</title>
+</head>
+<body>
+    <script>
+        alert("Vas a calcular el area y el volumen del cilindro ");
+        var radio, perimetroB, altura, areaLateral, area, volumen;
+        radio = parseFloat(prompt("Ingrese el valor del Radio:"));
+        altura = parseFloat(prompt("Ingrese la altura:"));
+        areaLateral = ( 2 * Math.PI * radio * altura);
+        area = (areaLateral + (2 * Math.PI * (Math.pow((radio),2))));
+        volumen = (Math.PI * (Math.pow((radio),2)) * altura);
+        alert("EL area es: "+area+" cm2. Y el volumen es: "+volumen+" cm3");
+
+    
+    </script>
+    
+</body>
+</html>

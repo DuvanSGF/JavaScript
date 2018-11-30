@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Liquidacion	</title>
+</head>
+<body>
+<script type="text/javascript">
+
+// Funcion Donde se Calcula solo La comision de las Ventas.
+        function liquidarComision()
+        {
+            var ventas, sueldobase, diasTrabajados;
+            sueldobase = parseInt(prompt("Ingresa el sueldo base:"));
+            ventas = parseInt(prompt("Ingresa las Ventas:"));
+            diasTrabajados = parseInt(prompt("Ingrese los dias trabajados"));
+
+            if(ventas >= 1 && ventas <= 5 ){
+                comision = ((sueldobase * 0.04) + sueldobase);
+                resultado = ((comision / 30)* diasTrabajados);
+                document.write("<font size = 7 color= red>"+resultado+" Entre 1 and 5"+"</font>");
+            }else if (ventas > 5 ){
+                comision = ((sueldobase * 0.1) + sueldobase);
+                resultado = ((comision / 30)* diasTrabajados);
+                document.write("<font size = 7 color= red>"+resultado+" Mayor 5"+"</font>");
+            }else{
+                comision = sueldobase;
+                document.write("<font size = 7 color= red>"+comision+" No ventas"+"</font>");
+            }
+        }
+
+// Funcion Donde se liquida los viatico segun el Lugar.
+        function liquidarViaticos()
+        {
+            var sueldobase, zona, diasZonas;
+            sueldobase = parseInt(prompt("Ingresa el sueldo base:"));
+            zona = parseInt(prompt("En que zona ha estado"));
+            diasZonas = parseInt(prompt("dias en la zona"));
+
+            if(zona == 1){
+                viaticos = (sueldobase + (100000 * diasZonas));
+                resultado = (viaticos);
+                document.write("<font size = 7 color= red>"+resultado+" Zona A"+"</font>");
+            }else if (zona == 2){
+                viaticos = (sueldobase + (150000 * diasZonas));
+                resultado = (viaticos);
+                document.write("<font size = 7 color= red>"+resultado+" Zona B"+"</font>");
+            }else if (zona == 3){
+                viaticos = (sueldobase + (200000 * diasZonas));
+                resultado = (viaticos);
+                document.write("<font size = 7 color= red>"+resultado+" Zona C"+"</font>");
+            }else{
+                resultado = (sueldobase);
+                document.write("<font size = 7 color= red>"+resultado+" Ninguna Zona"+"</font>");
+            }
+        }
+
+// Funcion para liquidar el sueldo de una persona. (Segun los dias de trabajo, la comision, y los vaticos)
+        function liquidarSueldo()
+        {
+            var ventas, sueldobasezona, diasZonas, diasTrabajados;
+            sueldobase = parseInt(prompt("Ingresa el sueldo base:"));
+            ventas = parseInt(prompt("Ingresa las Ventas:"));
+            diasTrabajados = parseInt(prompt("Dias Total Trabajados"));
+            zona = parseInt(prompt("En que zona ha estado"));
+            diasZonas = parseInt(prompt("dias en la zona"));
+
+// Utilizamos las funcion de liquidar comision
+            if(ventas >= 1 && ventas <= 5 ){
+                comision = (sueldobase *0.04);
+                resultadocomision = comision + sueldobase;
+            }else if (ventas > 5 ){
+                comision = (sueldobase * 0.1);
+                resultadocomision = comision + sueldobase;
+            }else{
+                resultadocomision = sueldobase;
+            }
+
+// Asignamos ese valor a la variable  $sueldoFinal.  Que son el sueldo + la comision  divido por 30 y multiplicado por los dias de trabajo. 
+            sueldoFinal = ((resultadocomision/30)*diasTrabajados);
+
+// Utilizamos la funcion de los viatico, aqui se suma el sueldo anterior con los viaticos . Este la liquidacion por persona.
+            if(zona == 1){
+                viaticos = (sueldoFinal + (100000 * diasZonas));
+                resultado = (viaticos);
+            }else if (zona == 2){
+                viaticos = (sueldoFinal + (150000 * diasZonas));
+                resultado = (viaticos);
+            }else if (zona == 3){
+                viaticos = (sueldoFinal + (200000 * diasZonas));
+                resultado = (viaticos);
+            }else{
+                resultado = (sueldoFinal);
+            }
+// Aqui lo imprimimos en HTML 
+            document.write("<font size = 7 color= red>"+" El Sueldo Final es: "+resultado+"</font>");
+        }
+
+// Esta es la venta de opciones que aparece al principio . Es swicth donde nos llamara la funcion que necesitaremos. 
+        sueldototal = parseInt(prompt("1:Liquidar Comision. 2:Liquidar Viaticos. 3:Sueldo total"));
+        switch(sueldototal){
+				case 1:
+				liquidarComision();
+				break;
+				case 2:
+				liquidarViaticos();
+				break;
+				case 3:
+				liquidarSueldo();
+				break;
+				default:
+				alert("Opcion Errada");
+            }
+// End of work  . work finished at 3.13 pm  07/09/2018 . Developed by Duvan Mejia
+</script>
+		
+</body>
+</html>

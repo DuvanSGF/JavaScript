@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prisma</title>
+</head>
+<body>
+    <script>
+        alert("Vas a calcular el area, volumen y perimetro del prisma");
+        var result = confirm("Es un prisma triangular");
+        if(result==true){
+            var ladoBase, lado2, lado3, perimetrob, alturaT, alturaP, areaBase, areaLateral, area, volumen, perimetro;
+            ladoBase = parseFloat(prompt("Ingresa el lado base del triangulo: "));
+            lado2 = parseFloat(prompt("Ingrea el lado 2: "));
+            lado3 = parseFloat(prompt("Ingresa el lado 3: "));
+            alturaT = parseFloat(prompt("Ingresa la altura del triangulo: "));
+            alturaP = parseFloat(prompt("Ingresa la altura del prisma: "));
+            perimetrob = (ladoBase + lado2 + lado3);
+            areaLateral = (perimetrob * alturaP);
+            areaBase = (2 * ((ladoBase * alturaT)/2));
+            area = (areaLateral + areaBase);
+            volumen = (((alturaT * ladoBase)/2) * alturaP);
+            alert("Area total del  es:"+area +" cm2 Y el Volumen es : "+volumen+" cm3.");
+
+        }else{
+            alert("Es un prisma cuadrangular");
+            var ladoBase, perimetrob, alturaP, areaBase, areaLateral, area, volumen, perimetro;
+            ladoBase = parseFloat(prompt("Ingresa el lado base:"));
+            alturaP = parseFloat(prompt("Ingresa la Altura del prisma:"));
+            perimetrob = (4 * ladoBase);
+            areaLateral = (perimetrob * alturaP);
+            areaBase = (2  * (ladoBase * ladoBase));
+            area = (areaLateral + areaBase);
+            volumen = (Math.pow((ladoBase),2) * alturaP);
+            //alert("Area total del  es:"+perimetrob +" cm2 Y el Volumen es : "+areaLateral+" cm3.");
+            alert("Area total del  es:"+area +" m2 Y el Volumen es : "+volumen+" m3.");
+        }
+
+
+    </script>
+    
+</body>
+</html>

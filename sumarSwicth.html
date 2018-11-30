@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+<script type="text/javascript">
+        function sumar()
+        {
+            c = a + b;
+            document.write("<font size = 7 color= red>"+c+"</font>");
+        }
+        function restar()
+        {
+            c = a - b;
+            document.write("<font size = 7 color= red>"+c+"</font>");
+        }
+        function multiplicar()
+        {
+            c = a * b;
+            document.write("<font size = 7 color= red>"+c+"</font>");
+        }
+        function dividir()
+        {
+            c = a / b;
+            document.write("<font size = 7 color= red>"+c+"</font>");
+        }
+        var a, b, c, op;
+        a = parseInt(prompt("a:"));
+        b = parseInt(prompt("b:"));
+        op = parseInt(prompt("1:Sumar. 2:Restar. 3:multiplicar. 4:dividir."))
+        switch(op){
+				case 1:
+				sumar();
+				break;
+				case 2:
+				restar();
+				break;
+				case 3:
+				multiplicar();
+				break;
+				case 4:
+				dividir();
+				break;
+				default:
+				alert("Opcion Errada");
+			}
+</script>
+		
+</body>
+</html>

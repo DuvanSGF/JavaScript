@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--
+		 When a Date object is created, a number of methods make it possible
+		 to perform operations on it.
+
+		 for example:
+
+		var d = new Date();
+		var hours = d.getHours();	
+
+
+		-
+			crearemos un programa que imprima la fecha corriente para el navegador 
+			una vez cada segungo.
+
+	-->
+	<script type="text/javascript">
+		
+		function printTime(){
+			var d = new Date();
+			var hours = d.getHours();
+			var mins = d.getminutes();
+			var secs = d.getSeconds();
+			document.body.innerHTML = hours+":"+mins+":"+secs;
+			}
+			setInterval(printTime,1000);
+	</script>
+	<!--
+		declaramos una funcion printTime(),
+		el cual encuentra en comun el tiempo 
+		del objeto de fecha.
+		entonces cuando la funcion una vez la segunda la 
+		llamamos usando el setInterval method.
+
+
+		1-
+			El innerHTML propiedad establece o retorna el HTML content de un 
+			elemento.
+			In nuestro case, podemos estar cambiando el contenido html de 
+			nuestro cuerpo del documento.
+	-->
+</body>
+</html>

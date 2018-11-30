@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--Call the method as usual-->
+	<script type="text/javascript">
+		function person(name,age) {
+			this.name=name;
+			this.age=age;
+			this.yearOfBirth = bornYear;
+		}
+		function bornYear(){
+			return 2017-this.age;
+		}
+
+		var p = new person("Duvan",19);
+		document.write("su nombre "+ p.name +", y su año de nacimiento es: "
+			+p.yearOfBirth());
+	</script>
+</body>
+</html>

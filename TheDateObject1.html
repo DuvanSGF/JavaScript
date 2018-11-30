@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--
+		The Date object enables us to work with dates.
+		A date consist of a year a month, a day, an hour
+		an hour, a minute , a second, and milisecond.
+
+		Using new Date(), ceate a new date object with the current date and time.
+
+		-->
+		<script type="text/javascript">
+		var d = new Date();
+		// d stores the current date and time
+
+		</script>
+	<!--
+
+		the other ways to initialize dates allow for the creation of new 
+		date objects from the specified date time.-->
+
+		<script type="text/javascript">
+
+		new Date(miliseconds)
+		new Date(dateString)
+		new Date(year,month,day,hours,minutes,second,milliseconds)
+       </script>
+<!--
+       note:
+       		JavaScript dates are calculated in miliseconds from 01 January
+       		1970 00:00:00 Universal Time (UTC).One day contains 86,400,00 milisecond.
+
+       		for example:
+-->
+<script type="text/javascript">
+	
+	//Fri Jan 02 1970  00:00:00
+	var d1 = new Date(86400000);
+
+	//Fri Jan 02 2015 10:42:00
+	var d2 = new Date("January 2,2015 10:42.00");
+
+	//Sat Jun 11 1988 11:42:00
+	var d3 = new Date(88,5,11,11,42,0,0);
+</script>
+<!--JavaScript counts months from 0 to 11. January is 0, and December is 11.
+	Date Objects are static, rather than dinamic. The computer time is ticking,
+	but date object don't change, once created.-->
+</body>
+</html>

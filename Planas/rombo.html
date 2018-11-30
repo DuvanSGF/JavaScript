@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rombo</title>
+</head>
+<body>
+    <script>
+        alert("Vas a calcular el Area y Perimetro de un Rombo");
+        var lado, dmayor, dmenor, perimetro, area;
+        //lado = parseFloat(prompt("Ingresa el valor del lado:"));
+        dmayor = parseFloat(prompt("Ingresa el valor de la diagonal mayor:"));
+        dmenor = parseFloat(prompt("Ingresa el valor de la diagonal menor:"));
+        // Pitagoras para hallar el lado
+        lado = Math.hypot((dmayor/2),(dmenor/2));
+        perimetro = (4 * lado);
+        area = ((dmayor*dmenor)/2);
+        alert("El area del Rombo es: "+ area+" cm2 y el perimetro es: "+perimetro+" cm")    
+        alert("Gracias, Vuelve pronto!");
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!--
+	The setInterval() method calls a function or evaluates an expression
+	at specified interval (in milliseconds).
+
+	it will continue calling the function until clearInterval() is called or the windowa
+	is closed.
+
+	for example:
+-->
+
+	<script type="text/javascript">
+		function myAlert(){
+			alert("Hi");
+		}
+		setInterval(myAlert,3000);
+
+
+	</script>
+	<!--
+		This will call the myAlert function every 3 second (1000 ms = 1 second).
+
+
+		note:
+
+			Escribir el nombre de la funcion sin los parentesis cuando este
+			pasando por el metodo setInterval como en el ejeplo.
+
+	-->
+</body>
+</html>

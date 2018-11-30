@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cono</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function area(){
+            op = ((Math.PI * r));
+            area = (op * (g + r));
+           alert(" El area del cono es: "+area+" cm2"); 
+
+        }
+        function volumen(){
+            volumen = ((Math.PI* Math.pow((r),2) * a )/ 3 );
+            alert("El volumen del cono es: "+volumen+" cm3");
+
+        }
+        function ambos(){
+            area();
+            volumen();
+
+        }
+
+        r = parseFloat(prompt("Ingrese el Radio:"));
+        a = parseFloat(prompt("Ingrese la Altura:"));
+        g = parseFloat(prompt("Ingrese la generatriz del como"));
+        cono = parseFloat(prompt("1:Area. 2:Volumen. 3:Area y volumen"));
+        switch(cono){
+				case 1:
+				area();
+				break;
+				case 2:
+				volumen();
+				break;
+				case 3:
+				ambos();
+				break;
+				default:
+				alert("Opcion Errada");
+            }
+    
+    </script>
+</body>
+</html>

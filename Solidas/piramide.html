@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Piramide</title>
+</head>
+<body>
+    <script>
+        alert(" Va a calcular el area y volumen de una piramide");
+        var ladoB, alturaP, alturaL, areaLateral, areaBase, area, perimetro;
+        ladoB = parseFloat(prompt("Ingrese el lado Base:"));
+        alturaP = parseFloat(prompt("Ingrese la altura de la piramide:"));
+        alturaL = parseFloat(prompt("Ingrese la altura del lado:"));
+        areaLateral = (((ladoB * 4)* alturaL)/2);
+        areaBase = Math.pow((ladoB),2);
+        area = (areaLateral + areaBase);
+        volumen = ((areaBase * alturaP)/3);
+        alert("El area de la piramide es: "+area+" cm2. Y el volumen es: "+volumen+" cm3.");
+        alert("Gracias vuelve pronto");
+
+    </script>
+    
+</body>
+</html>

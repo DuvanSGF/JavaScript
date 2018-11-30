@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--Methods are funtions that are stored as object properties
+		Use the following syntax to create an object method:
+
+		1) methodName : function() {codes lines}
+
+		para accesar al metodos lo realizamos con el siguiente codigo:
+		syntax
+
+		2) objectName.methodName()
+
+		The this keyword is used as a reference to current object, meaning that you
+		can access the objects properties and methods using it.
+		Defining methods is done inside the constructor function.
+
+		For Example:
+		-->
+			<script type="text/javascript">
+				function person(name,age){
+					this.name = name;
+					this.age = age;
+					this.changeName = function (name)
+					{
+						this.name = name;
+					}
+				}
+				var p = new person("Camilo",21);
+				p.changeName("Duvan");
+				document.write(p.name)
+				//ahora p.name es igual a "Duvan"
+			</script>
+
+
+</body>
+</html>

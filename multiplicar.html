@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabla</title>
+</head>
+<body>
+    <script>
+        var Tabla, InicioT, FinalT, Rest;
+        Tabla = parseInt(prompt("Que tabla desea?"));
+        InicioT = parseInt(prompt("Desde:"));
+        FinalT = parseInt(prompt("Hasta :"));
+        document.write("<font color = Blue size =5>Tablas de Multiplicar </font>");
+        document.write("<table border=2 bgcolor=red>");
+        for(i = InicioT; i<=FinalT; i++)
+        {
+            Rest = Tabla * i;
+            document.write("<tr>");
+            document.write("<td>", Tabla,"</td>");
+            document.write("<td bgcolor=yellow>","x","</td>");
+            document.write("<td>",i,"</td>");
+            document.write("<td bgcolor=yellow>","=","</td>");
+            document.write("<td>",Rest,"</td>")
+           
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    
+</body>
+</html>
+3 ejecicio es: calcular dado dos puntos la ecuacion de la recta. pendiente, punto medio, y consultar las funciones. 
+tablas 10 pantallas. y luego que s

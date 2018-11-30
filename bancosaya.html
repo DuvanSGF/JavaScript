@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Banco Saya</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function cuota()
+            {
+                cuota = (monto * (1.950/100))/(1-Math.pow(1+(1.950/100), - plazoc));
+            }
+        function interes()
+        {
+            interes = (monto * (1.950/100));
+        }
+        function abono()
+        {
+            abono = cuota - interes;
+        }// intentandolo hacer por funciones
+        
+            var tasainteres, monto, plazoc, op;
+            plazoc = parseFloat(prompt("Ingrese el plazo :"));
+            monto = parseFloat(prompt("Ingresa el monto a prestar: "))
+            
+            document.write("<font color = Blue size =5 >BANCO SAYA </font>");
+            document.write("<br>");
+            document.write("<font color = Blue size =2>Liquidador de prestamos </font>");
+            document.write("<table border=2 bgcolor=red>");
+            document.write("<tr>");
+            document.write("<td bgcolor=silver>", "periodo", "</td>");
+            document.write("<td bgcolor=lime>", "inicial", "</td>");
+            document.write("<td bgcolor=silver>", "Valor interes", "</td>");
+            document.write("<td bgcolor=lime>", "AbonoCapital", "</td>");
+            document.write("<td bgcolor=silver>", "cuota", "</td>");
+            document.write("<td bgcolor=lime>", "final", "</td>");
+            document.write("/<tr>");
+
+            cuotax=0;
+            for(i = 0; i<plazoc; i++)
+            {
+                valori = Math.round((monto * (1.950/100)));
+                cuota2 = Math.pow(1 + (1.950/100), -plazoc);
+                cuota3 = (1- cuota2);
+                cuota = Math.round(valori/cuota3);
+                abonoc = (cuota - valori);
+                rest = (monto - abonoc);
+                
+                //codigo nuevo
+                if(cuotax==0){
+                    cuotax=cuota;
+                }else{
+                    abonoc = (cuotax - valori);
+                    rest = (monto - abonoc);
+                }
+                
+                if(rest<0){
+                    valori=valori+rest;
+                    rest=0;
+                }
+                document.write("<tr>");
+                document.write("<td>", i+1,"</td>");
+                document.write("<td bgcolor=yellow>",monto,"</td>");
+                document.write("<td>",valori,"</td>");
+                document.write("<td bgcolor=yellow>",abonoc,"</td>");
+                document.write("<td>",cuotax,"</td>")
+                document.write("<td bgcolor=yellow>",rest,"</td>")
+               
+                document.write("</tr>");
+                //codigo nuevo
+                monto = monto - abonoc;
+                }
+           
+            document.write("</table>");
+        </script>
+    
+</body>
+</html>
